@@ -1,10 +1,3 @@
-//
-//  PianoView.swift
-//  pianov
-//
-//  Created by Rock on 7/9/2024.
-//
-
 import SwiftUI
 
 struct PianoView: View {
@@ -52,5 +45,11 @@ struct PianoView: View {
             .fill(activeNote != nil ? Color.blue : Color.black)
             .frame(width: blackKeyWidth, height: blackKeyHeight)
             .offset(x: -blackKeyWidth / 2)
+    }
+}
+
+struct PianoView_Previews: PreviewProvider {
+    static var previews: some View {
+        PianoView(viewModel: PianoViewModel())
     }
 }

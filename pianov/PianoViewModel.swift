@@ -81,6 +81,8 @@ class PianoViewModel: ObservableObject {
         if notes.isEmpty {
             throw NSError(domain: "PianoViewModel", code: 4, userInfo: [NSLocalizedDescriptionKey: "No notes found in MIDI file"])
         }
+        
+        print("Parsed notes: \(notes)")  // Debug print to check parsed notes
     }
     
     func start() {

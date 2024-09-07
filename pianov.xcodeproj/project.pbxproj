@@ -80,6 +80,7 @@
 		842194D12C8C0999000B5D18 = {
 			isa = PBXGroup;
 			children = (
+				8421950B2C8C0CA5000B5D18 /* Mark-Northam-Married-Life-From-Up.mid */,
 				842194DC2C8C0999000B5D18 /* pianov */,
 				842194ED2C8C099B000B5D18 /* pianovTests */,
 				842194F72C8C099B000B5D18 /* pianovUITests */,
@@ -105,7 +106,6 @@
 				842195092C8C0BEC000B5D18 /* PianoView.swift */,
 				842195072C8C0BBF000B5D18 /* PianoViewModel.swift */,
 				842194E12C8C099B000B5D18 /* Assets.xcassets */,
-				8421950B2C8C0CA5000B5D18 /* Mark-Northam-Married-Life-From-Up.mid */,
 				842194E32C8C099B000B5D18 /* Preview Content */,
 			);
 			path = pianov;

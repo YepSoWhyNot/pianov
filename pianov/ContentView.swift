@@ -3,28 +3,20 @@ import SwiftUI
 struct ContentView: View {
     @StateObject private var viewModel = PianoViewModel()
     @State private var errorMessage: String?
-    
+
     var body: some View {
         VStack {
             Text("Piano Visualization")
                 .font(.largeTitle)
-            
+
             if viewModel.notes.isEmpty {
                 Text("No notes loaded")
                     .foregroundColor(.red)
             } else {
                 PianoView(viewModel: viewModel)
             }
-            
+
             HStack {
-                Button("Load MIDI") {
-                    do {
-                        try viewModel.loadMidiFile(named: "Mark-Northam-Married-Life-From-Up")
-                        errorMessage = nil
-                    } catch {
-                        errorMessage = error.localizedDescription
-                    }
-                }
                 Button("Start") {
                     viewModel.start()
                 }
@@ -32,7 +24,7 @@ struct ContentView: View {
                     viewModel.stop()
                 }
             }
-            
+
             if let errorMessage = errorMessage {
                 Text(errorMessage)
                     .foregroundColor(.red)
@@ -41,6 +33,7 @@ struct ContentView: View {
         .onAppear {
             do {
                 try viewModel.loadMidiFile(named: "Mark-Northam-Married-Life-From-Up")
+                viewModel.start() // Automatically start the visualization
             } catch {
                 errorMessage = error.localizedDescription
             }
